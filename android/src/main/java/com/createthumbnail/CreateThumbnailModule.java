@@ -58,7 +58,7 @@ public class CreateThumbnailModule extends ReactContextBaseJavaModule {
         private final ReadableMap options;
 
         protected ProcessDataTask(ReactContext reactContext, Promise promise, ReadableMap options) {
-            super(reactContext.getExceptionHandler());
+            super(reactContext);
             this.weakContext = new WeakReference<>(reactContext.getApplicationContext());
             this.promise = promise;
             this.options = options;
